@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC Home Solutions LLC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+        function translatePage() {
+            var elements = document.querySelectorAll("[data-en]");
+            var button = document.getElementById("translate-button");
+            var isEnglish = button.getAttribute("data-lang") === "en";
+            
+            elements.forEach(function(element) {
+                element.textContent = isEnglish ? element.getAttribute("data-es") : element.getAttribute("data-en");
+            });
+            
+            button.textContent = isEnglish ? "English" : "Español";
+            button.setAttribute("data-lang", isEnglish ? "es" : "en");
+        }
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <button id="translate-button" class="translate-button" onclick="translatePage()" data-lang="en">Español</button>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="NC Home Solutions LLC Logo" class="logo">
+            <h1 data-en="NC Home Solutions LLC" data-es="NC Soluciones para el Hogar LLC">NC Home Solutions LLC</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h2 data-en="Your Trusted Handyman Service in Putnam County, NY" data-es="Su servicio de mantenimiento de confianza en el condado de Putnam, NY">Your Trusted Handyman Service in Putnam County, NY</h2>
+        <p data-en="Providing quality home repairs, maintenance, and improvements with reliability and professionalism." data-es="Brindando reparaciones, mantenimiento y mejoras para el hogar con fiabilidad y profesionalismo.">Providing quality home repairs, maintenance, and improvements with reliability and professionalism.</p>
+        <img src="how-to-become-a-handyman-1.webp" alt="Handyman at work" width="100%">
+    </div>
+    <div class="container" id="services">
+        <h2 data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
+        <ul class="service-list">
+            <li><i class="fa-solid fa-screwdriver-wrench"></i><span data-en=" General Home Repairs" data-es=" Reparaciones Generales del Hogar"> General Home Repairs</span></li>
+            <li><i class="fa-solid fa-faucet-drip"></i><span data-en=" Plumbing and Electrical Fixes" data-es=" Reparaciones de Plomería y Electricidad"> Plumbing and Electrical Fixes</span></li>
+            <li><i class="fa-solid fa-couch"></i><span data-en=" Furniture Assembly" data-es=" Ensamblaje de Muebles"> Furniture Assembly</span></li>
+            <li><i class="fa-solid fa-paint-roller"></i><span data-en=" Painting and Drywall Repair" data-es=" Pintura y Reparación de Paneles de Yeso"> Painting and Drywall Repair</span></li>
+            <li><i class="fa-solid fa-hammer"></i><span data-en=" Deck and Fence Maintenance" data-es=" Mantenimiento de Terrazas y Cercas"> Deck and Fence Maintenance</span></li>
+            <li><i class="fa-solid fa-blender"></i><span data-en=" Appliance Installation" data-es=" Instalación de Electrodomésticos"> Appliance Installation</span></li>
+        </ul>
+        <p data-en="Don't see the service you need? Contact Us and let us know how we can help you!" data-es="¿No ves el servicio que necesitas? Contáctanos y dejanos saber como podemos ayudarte!">Don't see the service you need? Contact us and let us know how we can help you!</p>
+    </div>
+    <div class="container" id="contact">
+        <h2 data-en="Contact Us" data-es="Contáctenos">Contact Us</h2>
+        <p>📍 Mahopac, NY 10541</p>
+        <p>📞 (845) 490-1920</p>
+        <p>📧 info@nchomesolutions.com</p>
+        <p data-en="Feel free to call, email, or send us a message for a free estimate!" data-es="¡No dudes en llamarnos, enviarnos un correo electrónico o un mensaje para una estimación gratuita!">Feel free to call, email, or send us a message for a free estimate!</p>
+    </div>
+    <footer>
+        &copy; 2025 NC Home Solutions LLC. All Rights Reserved.
+    </footer>
+</body>
+</html>
+    

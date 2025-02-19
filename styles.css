@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1579c5;
+    background-size:100%;
+    text-align: center;
+    color: #333;
+}
+header {
+    background: url('AdobeStock_364394708_Preview.jpeg') center/100vw;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+
+}
+
+h1 {
+    color: white;
+    font-size: 2.8em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #2b2d2f;
+    color:rgb(237, 235, 235);
+    padding: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.hero {
+    width: 100vw;
+    height: 25vh;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(243, 239, 239);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+}
+
+.service-list {
+    list-style: circle;
+    padding: 10;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-list li {
+    margin-bottom: 10px; /* Adds spacing between list items */
+    display: flex;
+    align-items: left;
+    gap: 20px;
+}
+
+
+.service-list i {
+    font-size: 1.5em;
+    color: #d5d4d4; /* Adjust icon color */
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .service-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+.translate-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.translate-button:hover {
+    background-color: #cc5500;
+}
