@@ -167,7 +167,7 @@ a {
 
 /* Ensure all links have the same color on all devices */
 .service-list a {
-    color: #333; /* Set your desired color */
+    color: #dad7d7; /* Set your desired color */
     text-decoration: none; /* Removes underline */
 }
 
@@ -175,7 +175,7 @@ a {
 .service-list a:visited,
 .service-list a:active,
 .service-list a:focus {
-    color: #333; /* Maintain the same color */
+    color: #dad7d7; /* Maintain the same color */
 }
 
 /* Ensure no blue highlighting on mobile tap */
@@ -183,7 +183,7 @@ a {
 .service-list a:hover {
     outline: none;
     text-decoration: none;
-    color: #555; /* Slightly lighter color on hover for better UX */
+    color:#dad7d7; /* Slightly lighter color on hover for better UX */
 }
 
 /* Remove tap highlight color on mobile (for iOS and Android) */
