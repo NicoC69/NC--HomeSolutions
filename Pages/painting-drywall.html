@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painting and Drywall Repair | NC Home Solutions LLC</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        function translatePage() {
+            var elements = document.querySelectorAll("[data-en]");
+            var button = document.getElementById("translate-button");
+            var isEnglish = button.getAttribute("data-lang") === "en";
+            
+            elements.forEach(function(element) {
+                element.textContent = isEnglish ? element.getAttribute("data-es") : element.getAttribute("data-en");
+            });
+            
+            button.textContent = isEnglish ? "English" : "Español";
+            button.setAttribute("data-lang", isEnglish ? "es" : "en");
+        }
+    </script>
+</head>
+<body>
+    <button id="translate-button" class="translate-button" onclick="translatePage()" data-lang="en">Español</button>
+    <header>
+        <div class="header-container">
+            <a href="../index.html">
+                <img src="../images/logo1.png" alt="NC Home Solutions LLC Logo" class="logo">
+            </a>            
+            <h1 data-en="Painting and Drywall Repair" data-es="Pintura y Reparación de Paneles de Yeso">Painting and Drywall Repair</h1>
+        </div>
+    </header>
+    <div class="container">
+        <p data-en="We provide expert painting services and drywall repair to refresh and restore your home." 
+           data-es="Brindamos servicios expertos de pintura y reparación de paneles de yeso para renovar y restaurar su hogar.">
+           We provide expert painting services and drywall repair to refresh and restore your home.</p>
+           <img src="../images/a-hand-with-a-trowel-applying-joint-compound-to-a-wall-photo.jpeg" alt="Painting and Drywall Repair" class="service-image">
+           <p data-en="Contact us today for a free estimate!" data-es="¡Contáctenos hoy para una estimación gratuita!">Contact us today for a free estimate!</p>
+    </div>
+    <a href="../index.html" class="back-home">&larr; Back to Home</a>
+    <footer>
+        &copy; 2025 NC Home Solutions LLC. All Rights Reserved.
+    </footer>
+</body>
+</html>

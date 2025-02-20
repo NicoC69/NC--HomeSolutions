@@ -8,7 +8,7 @@ body {
     color: #333;
 }
 header {
-    background: url('AdobeStock_364394708_Preview.jpeg') center/100vw;
+    background: url('./images/AdobeStock_364394708_Preview.jpeg') center/100vw;
     padding: auto;
     text-align: center;
 }
@@ -71,26 +71,55 @@ footer {
 }
 
 .service-list {
-    list-style: circle;
-    padding: 10;
-    display: flexbox;
-    justify-content: center;
+    list-style: none; /* Removes default bullets */
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 15px; /* Space between list items */
 }
 
 .service-list li {
-    margin-bottom: 10px; /* Adds spacing between list items */
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px; /* Space between icon and text */
     font-size: 1.2em;
 }
 
+.service-list a {
+    text-decoration: none;
+    color: #dad7d7; /* Adjust text color */
+}
 
 .service-list i {
     font-size: 1.5em;
-    color: #d5d4d4; /* Adjust icon color */
+    color:  #1579c5; /* Adjust icon color */
+}
+.back-home {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.back-home:hover {
+    background-color: #cc5500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-image {
+    width: 75%;
 }
 
 @media (max-width: 768px) {
@@ -98,7 +127,7 @@ footer {
         flex-direction: column;
     }
     header {
-        background: url('AdobeStock_364394708_Preview.jpeg') center/auto 100vw;
+        background: url('./images/AdobeStock_364394708_Preview.jpeg') center/auto 100vw;
         padding: auto;
         text-align: center;
     }

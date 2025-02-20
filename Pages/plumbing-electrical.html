@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbing and Electrical Fixes | NC Home Solutions LLC</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        function translatePage() {
+            var elements = document.querySelectorAll("[data-en]");
+            var button = document.getElementById("translate-button");
+            var isEnglish = button.getAttribute("data-lang") === "en";
+            
+            elements.forEach(function(element) {
+                element.textContent = isEnglish ? element.getAttribute("data-es") : element.getAttribute("data-en");
+            });
+            
+            button.textContent = isEnglish ? "English" : "Español";
+            button.setAttribute("data-lang", isEnglish ? "es" : "en");
+        }
+    </script>
+</head>
+<body>
+    <button id="translate-button" class="translate-button" onclick="translatePage()" data-lang="en">Español</button>
+    <header>
+        <div class="header-container">
+            <a href="../index.html">
+                <img src="../images/logo1.png" alt="NC Home Solutions LLC Logo" class="logo">
+            </a> 
+            <h1 data-en="Plumbing and Electrical Fixes" data-es="Reparaciones básicas de Plomería y Electricidad">Plumbing and Electrical Fixes</h1>
+        </div>
+    </header>
+    <div class="container">
+        <p data-en="We handle basic plumbing and electrical repairs, from leaky faucets to faulty outlets." 
+           data-es="Manejamos reparaciones básicas de plomería y electricidad, desde grifos con fugas hasta tomas de corriente defectuosas.">
+           We handle basic plumbing and electrical repairs, from leaky faucets to faulty outlets.</p>
+           <img src="../images/plumbing:electrical.jpg" alt="Plumbing and Electrical" class="service-image">
+           <p data-en="Contact us today for a free estimate!" data-es="¡Contáctenos hoy para una estimación gratuita!">Contact us today for a free estimate!</p>
+    </div>
+    <a href="../index.html" class="back-home">&larr; Back to Home</a>
+    <footer>
+        &copy; 2025 NC Home Solutions LLC. All Rights Reserved.
+    </footer>
+</body>
+</html>
