@@ -9,7 +9,7 @@ body {
 }
 header {
     background: url('AdobeStock_364394708_Preview.jpeg') center/100vw;
-    padding: 20px;
+    padding: auto;
     text-align: center;
 }
 
@@ -23,7 +23,7 @@ header {
 .logo {
     width: 300px;
     height: auto;
-
+    padding: 20px;
 }
 
 h1 {
@@ -31,6 +31,17 @@ h1 {
     font-size: 2.8em;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
+h2 {
+    color: white;
+    font-size: 2.0em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-size: 1.2em;
+}
+
 .container {
     max-width: 1000px;
     margin: 20px auto;
@@ -70,8 +81,10 @@ footer {
 .service-list li {
     margin-bottom: 10px; /* Adds spacing between list items */
     display: flex;
-    align-items: left;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
+    font-size: 1.2em;
 }
 
 
@@ -84,12 +97,24 @@ footer {
     .header-container {
         flex-direction: column;
     }
+    header {
+        background: url('AdobeStock_364394708_Preview.jpeg') center/auto 100vw;
+        padding: auto;
+        text-align: center;
+    }
+
+    .logo {
+        width: 50vw;
+        height: 20vh;
+        padding: 5px;
+    }
 
     h1 {
         font-size: 1.5em;
     }
 
     .service-list li {
+        display:inline-block;
         flex-direction: column;
         text-align: center;
     }
