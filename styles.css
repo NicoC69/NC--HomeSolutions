@@ -1,45 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1579c5;
     background-size:100%;
     text-align: center;
-    color: #333;
 }
+
 header {
-    background: url('./images/AdobeStock_364394708_Preview.jpeg') center/100vw;
+    background-color: #2b2d2f;
     padding: auto;
     text-align: center;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap: 15px;
-}
-
 .logo {
-    width: 300px;
-    height: auto;
-    padding: 20px;
+    position: center;
+    width: 100vmax;
+    height: 100vmax;
+    max-height: 350px;
+    max-width: 500px;
+    padding: 10px;
 }
 
-h1 {
-    color: white;
-    font-size: 2.8em;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
 
 h2 {
     color: white;
-    font-size: 2.0em;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.2em;
+    font-family:'League Spartan', sans-serif;
 }
 
 p {
-    font-size: 1.2em;
+    font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
+    font-size: 1.5em;
 }
 
 .container {
@@ -50,7 +44,13 @@ p {
     padding: 30px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 30px; /* Adjust this value as needed */
+    font-optical-sizing: auto;
 }
+
 .hero {
     width: 100vw;
     height: 25vh;;
@@ -79,7 +79,7 @@ footer {
 .footer-info {
     display: flex;
     flex-direction: column;
-    line-height: 0.5; /* Adjust this value as needed */
+    line-height: 0.1; /* Adjust this value as needed */
 }
 
 .footer-info i {
@@ -95,13 +95,14 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 15px; /* Space between list items */
+    font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
+    font-size: 2.0em;
 }
 
 .service-list li {
     display: flex;
     align-items: center;
     gap: 15px; /* Space between icon and text */
-    font-size: 1.2em;
 }
 
 .service-list a {
@@ -110,9 +111,15 @@ footer {
 }
 
 .service-list i {
-    font-size: 1.5em;
     color:  #1579c5; /* Adjust icon color */
 }
+
+.service-image {
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+}
+
 .back-home {
     position: fixed;
     bottom: 20px;
@@ -144,18 +151,26 @@ a {
         flex-direction: column;
     }
     header {
-        background: url('./images/AdobeStock_364394708_Preview.jpeg') center/auto 100vw;
+        background-color: #2b2d2f;
         padding: auto;
         text-align: center;
     }
 
     .logo {
-        width: 50vw;
+        width: 65vw;
         height: 20vh;
         padding: 5px;
     }
 
-    h1 {
+    h2 {
+        font-size: 1.7em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .service-list {
         font-size: 1.5em;
     }
 
@@ -163,6 +178,10 @@ a {
         display:inline-block;
         flex-direction: column;
         text-align: center;
+    }
+
+    .footer-container p {
+        font-size: 1.4em;
     }
 }
 
