@@ -19,6 +19,41 @@
             button.textContent = isEnglish ? "English" : "Español";
             button.setAttribute("data-lang", isEnglish ? "es" : "en");
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mobileMenu = document.querySelector("#mobile-menu");
+        const closeMenuBtn = document.querySelector(".close-menu");
+        const serviceDropdown = document.querySelector(".mobile-menu .dropdown-menu");
+        const serviceLink = document.querySelector(".mobile-menu a[href='#']");
+
+        // Open the mobile menu
+        menuToggle.addEventListener("click", function () {
+            mobileMenu.classList.add("show");
+        });
+
+        // Close the mobile menu
+        closeMenuBtn.addEventListener("click", function () {
+            mobileMenu.classList.remove("show");
+        });
+
+        // Close when clicking outside the menu
+        document.addEventListener("click", function (event) {
+            if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                mobileMenu.classList.remove("show");
+            }
+        });
+
+        // Toggle the Services Dropdown in Mobile Menu
+        serviceLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            if (serviceDropdown.style.display === "block") {
+                serviceDropdown.style.display = "none";
+            } else {
+                serviceDropdown.style.display = "block";
+            }
+        });
+    });
     </script>
 </head>
 <body>
@@ -27,7 +62,48 @@
         <div class="header-container">
             <a href="../index.html">
                 <img src="../images/NC Home Solutions (Pizarra online) (2).png" alt="NC Home Solutions LLC Logo" class="logo">
-            </a>            
+            </a> 
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../aboutus.html">About Us</a></li>
+
+                    <li>
+                        <a href="#">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Pages/appliance-installation.html">Appliance Installation</a></li>
+                            <li><a href="../Pages/smart-home.html">Cameras & Smart Home Devices</a></li>
+                            <li><a href="../Pages/deck-fence-maintenance.html">Deck and Fence Maintenance</a></li>
+                            <li><a href="../Pages/furniture-assembly.html">Furniture Assembly</a></li>
+                            <li><a href="../Pages/general-home-repairs.html">General Home Repairs</a></li>
+                            <li><a href="../Pages/plumbing-electrical.html">Plumbing and Electrical Fixes</a></li>
+                            <li><a href="../Pages/painting-drywall.html">Painting and Drywall Repair</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>           
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <span class="close-menu" onclick="closeMenu()">✖</span>
+            <ul>
+                <li><a href="../index.html" onclick="closeMenu()">Home</a></li>
+                <li><a href="../aboutus.html" onclick="closeMenu()">About Us</a></li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Pages/appliance-installation.html" onclick="closeMenu()">Appliance Installation</a></li>
+                        <li><a href="../Pages/smart-home.html" onclick="closeMenu()">Cameras & Smart Home Devices</a></li>
+                        <li><a href="../Pages/deck-fence-maintenance.html" onclick="closeMenu()">Deck and Fence Maintenance</a></li>
+                        <li><a href="../Pages/furniture-assembly.html" onclick="closeMenu()">Furniture Assembly</a></li>
+                        <li><a href="../Pages/general-home-repairs.html" onclick="closeMenu()">General Home Repairs</a></li>
+                        <li><a href="../Pages/plumbing-electrical.html" onclick="closeMenu()">Plumbing and Electrical Fixes</a></li>
+                        <li><a href="../Pages/painting-drywall.html" onclick="closeMenu()">Painting and Drywall Repair</a></li>
+                    </ul>
+                </li>
+                <li><a href="#footer" onclick="closeMenu()">Contact</a></li>
+            </ul>
         </div>
     </header>
         <h2 data-en="Furniture Assembly" data-es="Ensamblaje de Muebles">Furniture Assembly</h2>
