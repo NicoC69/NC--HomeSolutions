@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/cd1ff12a61d0f65ad3079a7c7461b61f?family=Oilvare+Base" rel="stylesheet">
+    <link rel="icon" href="./images/SNC Home Solutions ICON.png">
 
     <script>
         function translatePage() {
@@ -70,61 +71,68 @@
     </style>
 </head>
 <body>
-    <button id="translate-button" class="translate-button" onclick="translatePage()" data-lang="en">Español</button>
     <header>
         <div class="header-container">
-            <a href="./index.html">
-                <img src="./images/SNC Home Solutions.png" alt="SNC Home Solutions LLC Logo" class="logo">
-            </a>
-                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            <nav>
+            <!-- Logo on the left -->
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="./images/SNC Home Solutions.png" alt="SNC Home Solutions Logo">
+                </a>
+            </div>
+    
+            <!-- Menu on the right -->
+            <div class="nav-container">
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
-                        <li>
-                            <a href="#">Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./Pages/appliance-installation.html">Appliance Installation</a></li>
-                                <li><a href="./Pages/smart-home.html">Cameras & Smart Home Devices</a></li>
-                                <li><a href="./Pages/deck-fence-maintenance.html">Deck and Fence Maintenance</a></li>
-                                <li><a href="./Pages/furniture-assembly.html">Furniture Assembly</a></li>
-                                <li><a href="./Pages/general-home-repairs.html">General Home Repairs</a></li>
-                                <li><a href="./Pages/plumbing-electrical.html">Plumbing and Electrical Fixes</a></li>
-                                <li><a href="./Pages/painting-drywall.html">Painting and Drywall Repair</a></li>
-                            </ul>
-                        </li>
+                    <li>
+                        <a href="#">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./Pages/appliance-installation.html">Appliance & TV Installation</a></li>
+                            <li><a href="./Pages/smart-home.html">Cameras & Smart Home Devices</a></li>
+                            <li><a href="./Pages/deck-fence-maintenance.html">Deck and Fence Maintenance</a></li>
+                            <li><a href="./Pages/furniture-assembly.html">Furniture Assembly</a></li>
+                            <li><a href="./Pages/general-home-repairs.html">General Home Repairs</a></li>
+                            <li><a href="./Pages/plumbing-electrical.html">Plumbing and Electrical Fixes</a></li>
+                            <li><a href="./Pages/painting-drywall.html">Painting and Drywall Repair</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#footer">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
+    
+            <!-- Hamburger icon for mobile -->
+            <div class="menu-toggle">☰</div>
         </div>
-
-        <div class="mobile-menu" id="mobile-menu">
-            <span class="close-menu" onclick="closeMenu()">✖</span>
+    
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+            <span class="close-menu">✖</span>
             <ul>
-                <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-                <li><a href="aboutus.html" onclick="closeMenu()">About Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
                 <li>
                     <a href="#">Services</a>
                     <ul class="dropdown-menu">
-                        <li><a href="./Pages/appliance-installation.html" onclick="closeMenu()">Appliance Installation</a></li>
-                        <li><a href="./Pages/smart-home.html" onclick="closeMenu()">Cameras & Smart Home Devices</a></li>
-                        <li><a href="./Pages/deck-fence-maintenance.html" onclick="closeMenu()">Deck and Fence Maintenance</a></li>
-                        <li><a href="./Pages/furniture-assembly.html" onclick="closeMenu()">Furniture Assembly</a></li>
-                        <li><a href="./Pages/general-home-repairs.html" onclick="closeMenu()">General Home Repairs</a></li>
-                        <li><a href="./Pages/plumbing-electrical.html" onclick="closeMenu()">Plumbing and Electrical Fixes</a></li>
-                        <li><a href="./Pages/painting-drywall.html" onclick="closeMenu()">Painting and Drywall Repair</a></li>
+                        <li><a href="./Pages/appliance-installation.html">Appliance & TV Installation</a></li>
+                        <li><a href="./Pages/smart-home.html">Cameras & Smart Home Devices</a></li>
+                        <li><a href="./Pages/deck-fence-maintenance.html">Deck and Fence Maintenance</a></li>
+                        <li><a href="./Pages/furniture-assembly.html">Furniture Assembly</a></li>
+                        <li><a href="./Pages/general-home-repairs.html">General Home Repairs</a></li>
+                        <li><a href="./Pages/plumbing-electrical.html">Plumbing and Electrical Fixes</a></li>
+                        <li><a href="./Pages/painting-drywall.html">Painting and Drywall Repair</a></li>
                     </ul>
                 </li>
-                <li><a href="#footer" onclick="closeMenu()">Contact</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <div class="container">
             <h2 data-en="Who We Are" data-es="Quiénes Somos">Who We Are</h2>
-            <p  data-en="At NC Home Solutions LLC, we take pride in providing reliable, high-quality handyman services in Putnam County, NY. We are dedicated to helping homeowners and businesses maintain and enhance their properties with expert craftsmanship and attention to detail."
-                data-es="En NC Home Solutions LLC, nos enorgullecemos de brindar servicios confiables y de alta calidad en el condado de Putnam, NY. Estamos dedicados a ayudar a propietarios y empresas a mantener y mejorar sus propiedades con trabajo experto y atención al detalle.">
-                At NC Home Solutions LLC, we take pride in providing reliable, high-quality handyman services in Putnam County, NY. We are dedicated to helping homeowners and businesses maintain and enhance their properties with expert craftsmanship and attention to detail.</p>
+            <p  data-en="At SNC Home Solutions LLC, we take pride in providing reliable, high-quality handyman services in Putnam County, NY. We are dedicated to helping homeowners and businesses maintain and enhance their properties with expert craftsmanship and attention to detail."
+                data-es="En SNC Home Solutions LLC, nos enorgullecemos de brindar servicios confiables y de alta calidad en el condado de Putnam, NY. Estamos dedicados a ayudar a propietarios y empresas a mantener y mejorar sus propiedades con trabajo experto y atención al detalle.">
+                At SNC Home Solutions LLC, we take pride in providing reliable, high-quality handyman services in Putnam County, NY. We are dedicated to helping homeowners and businesses maintain and enhance their properties with expert craftsmanship and attention to detail.</p>
     </div>
     
     <div class="container">
@@ -173,29 +181,40 @@
         </ul>
     </div>
         
-    <div class="container">
-        <h2 data-en="Get in Touch" data-es="Contáctenos">Get in Touch</h2>
-            <p  data-en="We'd love to help with your next home project! Contact us today to schedule a service or to get a free quote." 
-                data-es="¡Nos encantaría ayudarle con su próximo proyecto en casa! Contáctenos hoy para programar un servicio o para obtener una cotización gratuita.">
-                We'd love to help with your next home project! Contact us today to schedule a service or to get a free quote.</p>
-        
-        <div class="container">
+    
+    </div>
+
+    <footer id="footer">
+        <div class="footer-container">
+          <div class="footer-info">
+            <h2>Contact us</h2>
             <p><i class="fa-solid fa-location-dot"></i> Mahopac, NY 10541</p>
             <p><i class="fa-solid fa-phone"></i> (329) 233-2896</p>
             <p><i class="fa-solid fa-envelope"></i> snc.homesolutions@gmail.com</p>
             <p><i class="fa-solid fa-clock"></i> 
-                <span   data-en="Monday - Friday, 8:00 AM - 5:00 PM" 
-                        data-es="Lunes - Viernes, 8:00 AM - 5:00 PM">
-                        Monday - Friday / 8 AM - 5 PM
-                </span>
+              <span data-en="Monday - Friday, 8:00 AM - 5:00 PM" 
+                    data-es="Lunes - Viernes, 8:00 AM - 5:00 PM">
+                Monday - Friday / 8 AM - 5 PM
+              </span>
             </p>
+          </div>    
+      
+          <div class="footer-social">
+            <h2>Socials</h2>
+            <p><i class="fa-brands fa-instagram"></i> 
+              <a href="https://www.instagram.com/snchomesolutions" target="_blank">@snchomesolutions</a>
+            </p>
+            <p><i class="fa-brands fa-facebook"></i> 
+              <a href="https://www.facebook.com/profile.php?id=61575497332162#" target="_blank">SNC Home Solutions</a>
+            </p>
+            <p><i class="fa-brands fa-whatsapp"></i> 
+              <a href="https://wa.me/13292332896" target="_blank">Chat on WhatsApp</a>
+            </p>
+          </div>
         </div>
-    </div>
-
-    <footer id="footer">
-        <p>&copy; 2025 SNC Home Solutions LLC - All Rights Reserved.</p>
-        <a href="../index.html" class="back-home">&larr;Home</a>
-    </footer>
+      
+        <p class="footer-copy">&copy; 2025 SNC Home Solutions LLC. All Rights Reserved.</p>
+      </footer>
 
 </body>
 </html>

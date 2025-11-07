@@ -1,264 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-
+/* ---------------- BODY ---------------- */
 body {
     margin: 0;
     padding: 0;
     background-color: #1579c5;
-    background-size:100%;
     text-align: center;
+    font-family: "Montserrat", sans-serif;
 }
 
+/* ---------------- HEADER ---------------- */
 header {
     background-color: #2b2d2f;
-    padding: auto;
-    text-align: center;
+    padding: 0 30px;
+    position: relative;
 }
 
-.logo {
-    position: center;
-    width: 100vmax;
-    height: 100vmax;
-    max-height: 450px;
-    max-width: 700px;
-    margin-top: 20px;
-}
-
-h2 {
-    color: #cdc9c9;
-    font-size: 2.2em;
-    font-family: "montserrat", sans-serif;
-}
-
-p {
-    font-family: "montserrat", Verdana, Tahoma, sans-serif;
-    font-size: 1.5em;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 20px auto;
-    background: #2b2d2f;
-    color:#cdc9c9;
-    padding: 30px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    font-family: "montserrat", Verdana, Tahoma, sans-serif;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 30px; /* Adjust this value as needed */
-    font-optical-sizing: auto;
-}
-
-.container i {
-    color: #ff6600;
-}
-
-.container p {
-    font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
-    font-size: 2em;
-}
-
-.hero {
-    width: 100vw;
-    height: 25vh;;
+/* HEADER CONTAINER */
+.header-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(243, 239, 239);
-    font-size: 32px;
-    font-weight: bold;
-}
-
-footer {
-    background-color: #2b2d2f; /* Dark background */
-    color: #cdc9c9; /* Light text */
-    padding: 10px;
-    text-align: center;
-    font-size: 1em;
-}
-
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-info {
-    display: flex;
-    flex-direction: column;
-    line-height: 0.1; /* Adjust this value as needed */
-}
-
-.footer-info i {
-    color: #ff6600; /* Optional: Highlight icons */
-    margin-right: 8px;
-}
-
-.service-list {
-    list-style: none; /* Removes default bullets */
-    padding: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px; /* Space between list items */
-    font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
-    font-size: 2.0em;
+    padding-top: 30px;
+    position: relative;
 }
 
-.service-list li {
+/* LOGO */
+.logo-container {
     display: flex;
     align-items: center;
-    gap: 15px; /* Space between icon and text */
 }
 
-.service-list a {
-    text-decoration: none;
-    color: #dad7d7; /* Adjust text color */
+.logo-container img {
+    max-height: 400px;
+    width: auto;
 }
 
-.service-list i {
-    color:  #ff6600; /* Adjust icon color */
+/* NAVIGATION — bottom-right */
+.nav-container {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
 }
 
-.service-image {
-    justify-content: center;
-    height: 50%;
-    width: 50%;
-}
-
-.back-home {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ff6600;
-    color: #cdc9c9;
-    text-decoration: none;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1em;
-    font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
-}
-.back-home:hover {
-    background-color: #cc5500;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.service-image {
-    width: 75%;
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-    }
-    .container {
-        max-width: 800px;
-    }
-    header {
-        background-color: #2b2d2f;
-        padding: auto;
-        text-align: center;
-    }
-
-    .logo {
-        position: center;
-        width: 40vmax;
-        height: 30vmax;
-        max-height: 450px;
-        max-width: 700px;
-        margin-top: 20px;
-        margin-left: 20px;
-    }
-
-    h2 {
-        font-size: 1.7em;
-        color:#cdc9c9;
-    }
-
-    .container p {
-        font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
-        font-size: 1.5em;
-    }
-
-    .service-list {
-        font-size: 1.5em;
-    }
-
-    .service-list li {
-        display:inline-block;
-        flex-direction: column;
-        text-align: center;
-        font-size: 1.2em;
-    }
-
-    .footer-container p {
-        font-size: 1.2em;
-    }
-}
-/*-----------*/
-.translate-button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #ff6600;
-    color: #cdc9c9;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
-}
-.translate-button:hover {
-    background-color: #cc5500;
-}
-
-/* Ensure all links have the same color on all devices */
-.service-list a {
-    color: #dad7d7; 
-    text-decoration: none; 
-}
-
-/* Prevent mobile browsers from styling links as blue */
-.service-list a:visited,
-.service-list a:active,
-.service-list a:focus {
-    color: #dad7d7; 
-}
-
-/* Ensure no blue highlighting on mobile tap */
-.service-list a:focus,
-.service-list a:hover {
-    outline: none;
-    text-decoration: none;
-    color:#dad7d7; 
-}
-
-/* Remove tap highlight color on mobile (for iOS and Android) */
-a, button {
-    -webkit-tap-highlight-color: transparent;
-}
-
-/*-------------- Navigation Menu ---------------*/
-/* NAVIGATION MENU */
+/* MENU */
 .nav-menu {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 40px;
     margin: 0;
     padding: 0;
-    font-family: "Oilvare Base", Verdana, Tahoma, sans-serif;
-    font-size: 2.3rem;
+    padding-bottom: 25px;
 }
 
 .nav-menu li {
@@ -269,8 +64,7 @@ a, button {
     text-decoration: none;
     color: #dad7d7;
     font-weight: bold;
-    padding: 10px 15px;
-    display: block;
+    font-size: 1.8em;
     transition: color 0.3s ease;
 }
 
@@ -282,53 +76,47 @@ a, button {
 .dropdown-menu {
     display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     background: #2b2d2f;
-    min-width: 200px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    min-width: 220px;
     padding: 10px 0;
     border-radius: 5px;
-    font-family: "montserrat", Verdana, Tahoma, sans-serif;
-    font-size: 1.0em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 100;
 }
 
-.dropdown-menu li {
+.nav-menu li:hover .dropdown-menu {
     display: block;
-
 }
 
 .dropdown-menu a {
-    padding: 10px 15px;
+    padding: 12px 20px;
     display: block;
     color: #cdc9c9;
-    font-size: 0.7em;
+    font-size: 1.2em;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-menu a:hover {
-    background: #444;
+    background-color: #444;
+    color: #ff6600;
 }
 
-/* Show dropdown on hover (desktop only) */
-@media (min-width: 769px) {
-    .nav-menu li:hover .dropdown-menu {
-        display: block;
-    }
-}
-
-/* HAMBURGER ICON */
+/* ---------------- MOBILE MENU ---------------- */
 .menu-toggle {
     display: none;
     cursor: pointer;
     color: #cdc9c9;
-    font-size: 35px;
+    font-size: 40px;
+    margin-top: 10px;
 }
 
-/* MOBILE MENU */
 .mobile-menu {
     position: fixed;
     top: 0;
     left: 100%;
-    width: 50%;
+    width: 60%;
     height: 100%;
     background: #2b2d2f;
     display: flex;
@@ -344,13 +132,11 @@ a, button {
     left: 0;
 }
 
-/* MOBILE MENU LINKS */
 .mobile-menu ul {
     list-style: none;
     padding: 0;
     text-align: center;
     width: 100%;
-    font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
 }
 
 .mobile-menu li {
@@ -367,7 +153,6 @@ a, button {
     color: #ff6600;
 }
 
-/* CLOSE BUTTON */
 .close-menu {
     position: absolute;
     top: 15px;
@@ -377,9 +162,8 @@ a, button {
     cursor: pointer;
 }
 
-/* SERVICES DROPDOWN FOR MOBILE */
 .mobile-menu .dropdown-menu {
-    display: none; /* Hidden by default */
+    display: none;
     position: static;
     background: transparent;
     box-shadow: none;
@@ -387,25 +171,221 @@ a, button {
 }
 
 .mobile-menu .dropdown-menu a {
-    font-size: 1.2em;
-    padding: 5px 0;
-    display: block;
+    font-size: 1.5em;
+    padding: 8px 0;
 }
 
-.mobile-menu .dropdown-menu a:hover {
-    background: transparent;
+/* ---------------- MAIN CONTENT ---------------- */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    background: #2b2d2f;
+    color:#cdc9c9;
+    padding: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 30px;
+    align-items: center;
+}
+
+.container i {
     color: #ff6600;
 }
 
-/* RESPONSIVE STYLING */
-@media (max-width: 768px) {
+.container p {
+    font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
+    font-size: 2em;
+}
+
+.container img {
+    max-height: 600px;
+}
+
+.container h2 {
+    font-size:xx-large;
+}
+
+/* SERVICE LIST */
+.service-list {
+    list-style: none;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
+    font-size: 2em;
+}
+
+.service-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-list a {
+    text-decoration: none;
+    color: #dad7d7;
+}
+
+.service-list i {
+    color:  #ff6600;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    background-color: #2b2d2f;
+    color: #cdc9c9;
+    padding: 20px 50px;
+    font-size: 1.2em;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.footer-info i,
+.footer-social i {
+    color: #ff6600;
+    margin-right: 8px;
+}
+
+.footer-social a {
+    color: #dad7d7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ff6600;
+}
+
+footer > .footer-container > p:last-child {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #aaa;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1200px) {
+    .nav-container {
+        position: static;
+        margin-top: 0px;
+        color: #cdc9c9;
+    }
     .nav-menu {
-        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        font-size: 0.8em;
+        color: #cdc9c9;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
     }
 
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .logo-container img {
+        max-height: 100px;
+    }
 
     .menu-toggle {
         display: block;
-        font-family: 'League Spartan', Verdana, Tahoma, sans-serif;
     }
+
+    .nav-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .logo-container img {
+        max-height: 180px;
+        width: auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: medium;
+    }
+
+    .footer-info,
+    .footer-social {
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-list {
+        font-size: 1.5em;
+    }
+}
+
+/* Links */
+a {
+    color: #dad7d7;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+a:visited, a:active {
+    color: #dad7d7;
 }
