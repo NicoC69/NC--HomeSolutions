@@ -15,57 +15,65 @@
     <link rel="icon" href="./images/SNC Home Solutions ICON.png">
 
     <script>
-        function translatePage() {
-            var elements = document.querySelectorAll("[data-en]");
-            var button = document.getElementById("translate-button");
-            var isEnglish = button.getAttribute("data-lang") === "en";
-            
-            elements.forEach(function(element) {
-                element.textContent = isEnglish ? element.getAttribute("data-es") : element.getAttribute("data-en");
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const closeMenu = document.querySelector('.close-menu');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.add('show');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.remove('show');
+            });
+
+            // Optional: close menu if you click outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    mobileMenu.classList.remove('show');
+                }
+            });
+        
+          // --- MOBILE DROPDOWN TOGGLE ---
+            const serviceLinks = document.querySelectorAll(".mobile-menu li > a[href='#']");
+        
+            serviceLinks.forEach(link => {
+            link.addEventListener("click", function(e) {
+              e.preventDefault(); // Prevent page jump
+                const dropdown = this.nextElementSibling;
+        
+                if (dropdown && dropdown.classList.contains("dropdown-menu")) {
+                dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+                }
+            });
+            });
+        });
+        </script>
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('show');   // opens/closes menu
+                menuToggle.classList.toggle('active'); // animates hamburger to X
             });
             
-            button.textContent = isEnglish ? "English" : "Español";
-            button.setAttribute("data-lang", isEnglish ? "es" : "en");
-        }
-        function toggleMenu() {
-        document.querySelector(".nav-menu").classList.toggle("show");
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const mobileMenu = document.querySelector("#mobile-menu");
-        const closeMenuBtn = document.querySelector(".close-menu");
-        const serviceDropdown = document.querySelector(".mobile-menu .dropdown-menu");
-        const serviceLink = document.querySelector(".mobile-menu a[href='#']");
-
-        // Open the mobile menu
-        menuToggle.addEventListener("click", function () {
-            mobileMenu.classList.add("show");
-        });
-
-        // Close the mobile menu
-        closeMenuBtn.addEventListener("click", function () {
-            mobileMenu.classList.remove("show");
-        });
-
-        // Close when clicking outside the menu
-        document.addEventListener("click", function (event) {
-            if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                mobileMenu.classList.remove("show");
-            }
-        });
-
-        // Toggle the Services Dropdown in Mobile Menu
-        serviceLink.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent the default anchor behavior
-            if (serviceDropdown.style.display === "block") {
-                serviceDropdown.style.display = "none";
-            } else {
-                serviceDropdown.style.display = "block";
-            }
-        });
-    });
-    </script>
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.remove('show');
+            });
+            
+            // Toggle dropdowns
+            dropdownItems.forEach(link => {
+                link.addEventListener('click', e => {
+                    const parentLi = link.parentElement;
+                    if(parentLi.querySelector('.dropdown-menu')) {
+                        e.preventDefault(); // prevent link navigation
+                        parentLi.classList.toggle('show-dropdown');
+                    }
+                });
+            });
+            </script>
     <style>
         
     </style>
@@ -76,7 +84,7 @@
             <!-- Logo on the left -->
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="./images/SNC Home Solutions.png" alt="SNC Home Solutions Logo">
+                    <img src="./images/SNC-home-solutions-logo.png" alt="SNC Home Solutions Logo">
                 </a>
             </div>
     
@@ -130,9 +138,9 @@
 
     <div class="container">
             <h2 data-en="Who We Are" data-es="Quiénes Somos">Who We Are</h2>
-            <p  data-en="At SNC Home Solutions LLC, we take pride in providing reliable, high-quality handyman services in Putnam County, NY. We are dedicated to helping homeowners and businesses maintain and enhance their properties with expert craftsmanship and attention to detail."
-                data-es="En SNC Home Solutions LLC, nos enorgullecemos de brindar servicios confiables y de alta calidad en el condado de Putnam, NY. Estamos dedicados a ayudar a propietarios y empresas a mantener y mejorar sus propiedades con trabajo experto y atención al detalle.">
-                At SNC Home Solutions LLC, we take pride in providing reliable, high-quality handyman services in Putnam County, NY. We are dedicated to helping homeowners and businesses maintain and enhance their properties with expert craftsmanship and attention to detail.</p>
+            <p  data-en="At SNC Home Solutions LLC, we take pride in providing reliable, high-quality handyman services. We are dedicated to helping homeowners and businesses maintain and enhance their properties with expert craftsmanship and attention to detail."
+                data-es="En SNC Home Solutions LLC, nos enorgullecemos de brindar servicios confiables y de alta calidad. Estamos dedicados a ayudar a propietarios y empresas a mantener y mejorar sus propiedades con trabajo experto y atención al detalle.">
+                At SNC Home Solutions LLC, we take pride in providing reliable, high-quality handyman services. We are dedicated to helping homeowners and businesses maintain and enhance their properties with expert craftsmanship and attention to detail.</p>
     </div>
     
     <div class="container">
@@ -190,7 +198,7 @@
             <h2>Contact us</h2>
             <p><i class="fa-solid fa-location-dot"></i> Mahopac, NY 10541</p>
             <p><i class="fa-solid fa-phone"></i> (329) 233-2896</p>
-            <p><i class="fa-solid fa-envelope"></i> snc.homesolutions@gmail.com</p>
+            <p><i class="fa-solid fa-envelope"></i> <a href="mailto:snc.homesolutions@gmail.com">snc.homesolutions@gmail.com</a></p>
             <p><i class="fa-solid fa-clock"></i> 
               <span data-en="Monday - Friday, 8:00 AM - 5:00 PM" 
                     data-es="Lunes - Viernes, 8:00 AM - 5:00 PM">

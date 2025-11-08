@@ -13,54 +13,65 @@
     <link rel="icon" href="../images/SNC Home Solutions ICON.png">
 
     <script>
-        function translatePage() {
-            var elements = document.querySelectorAll("[data-en]");
-            var button = document.getElementById("translate-button");
-            var isEnglish = button.getAttribute("data-lang") === "en";
-            
-            elements.forEach(function(element) {
-                element.textContent = isEnglish ? element.getAttribute("data-es") : element.getAttribute("data-en");
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const closeMenu = document.querySelector('.close-menu');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.add('show');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.remove('show');
+            });
+
+            // Optional: close menu if you click outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    mobileMenu.classList.remove('show');
+                }
+            });
+        
+          // --- MOBILE DROPDOWN TOGGLE ---
+            const serviceLinks = document.querySelectorAll(".mobile-menu li > a[href='#']");
+        
+            serviceLinks.forEach(link => {
+            link.addEventListener("click", function(e) {
+              e.preventDefault(); // Prevent page jump
+                const dropdown = this.nextElementSibling;
+        
+                if (dropdown && dropdown.classList.contains("dropdown-menu")) {
+                dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+                }
+            });
+            });
+        });
+        </script>
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('show');   // opens/closes menu
+                menuToggle.classList.toggle('active'); // animates hamburger to X
             });
             
-            button.textContent = isEnglish ? "English" : "Español";
-            button.setAttribute("data-lang", isEnglish ? "es" : "en");
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const mobileMenu = document.querySelector("#mobile-menu");
-        const closeMenuBtn = document.querySelector(".close-menu");
-        const serviceDropdown = document.querySelector(".mobile-menu .dropdown-menu");
-        const serviceLink = document.querySelector(".mobile-menu a[href='#']");
-
-        // Open the mobile menu
-        menuToggle.addEventListener("click", function () {
-            mobileMenu.classList.add("show");
-        });
-
-        // Close the mobile menu
-        closeMenuBtn.addEventListener("click", function () {
-            mobileMenu.classList.remove("show");
-        });
-
-        // Close when clicking outside the menu
-        document.addEventListener("click", function (event) {
-            if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                mobileMenu.classList.remove("show");
-            }
-        });
-
-        // Toggle the Services Dropdown in Mobile Menu
-        serviceLink.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent the default anchor behavior
-            if (serviceDropdown.style.display === "block") {
-                serviceDropdown.style.display = "none";
-            } else {
-                serviceDropdown.style.display = "block";
-            }
-        });
-    });
-    </script>
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.remove('show');
+            });
+            
+            // Toggle dropdowns
+            dropdownItems.forEach(link => {
+                link.addEventListener('click', e => {
+                    const parentLi = link.parentElement;
+                    if(parentLi.querySelector('.dropdown-menu')) {
+                        e.preventDefault(); // prevent link navigation
+                        parentLi.classList.toggle('show-dropdown');
+                    }
+                });
+            });
+            </script>
 </head>
 <body>
     <header>
@@ -68,7 +79,7 @@
             <!-- Logo on the left -->
             <div class="logo-container">
                 <a href="../index.html">
-                    <img src="../images/SNC Home Solutions.png" alt="SNC Home Solutions Logo">
+                    <img src="../images/SNC-home-solutions-logo.png" alt="SNC Home Solutions Logo">
                 </a>
             </div>
     
@@ -136,7 +147,7 @@
             <h2>Contact us</h2>
             <p><i class="fa-solid fa-location-dot"></i> Mahopac, NY 10541</p>
             <p><i class="fa-solid fa-phone"></i> (329) 233-2896</p>
-            <p><i class="fa-solid fa-envelope"></i> snc.homesolutions@gmail.com</p>
+            <p><i class="fa-solid fa-envelope"></i> <a href="mailto:snc.homesolutions@gmail.com">snc.homesolutions@gmail.com</a></p>
             <p><i class="fa-solid fa-clock"></i> 
               <span data-en="Monday - Friday, 8:00 AM - 5:00 PM" 
                     data-es="Lunes - Viernes, 8:00 AM - 5:00 PM">
